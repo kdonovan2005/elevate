@@ -12,7 +12,15 @@ module Api
       end
 
       def create
-        
+        goal_name = params["data"]["attributes"]["name"]
+        user_id = params["data"]["relationships"]["user"]["data"]["id"]
+        user = User.find(user_id)
+        goal = Goal.create(name: goal_name, user: user)
+        render json: goal
+      end
+
+      def destroy
+        Goal.find(params["id"]).destroy
       end
 
     end
