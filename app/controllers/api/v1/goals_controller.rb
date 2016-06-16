@@ -11,6 +11,10 @@ module Api
         render json: goal, include: ['list_items']
       end
 
+      def create
+        
+      end
+
     end
   end
 end
