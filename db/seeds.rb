@@ -12,5 +12,5 @@ steve = User.create(name: "Steve", email: "steve@me.com")
 job = Goal.create(user: kristin, name: "Get a job!", start_date: Time.now, end_date: Time.now + 5, active: true)
 get_job = Goal.create(user: steve, name: "Jobs Please", start_date: Time.now, end_date: Time.now + 5, active: true)
 
-List_item.create(goal: job, description: "I'm a list-item", frequency: "Daily", completed: false)
-List_item.create(goal: get_job, description: "I'm another list-item", frequency: "Daily", completed: false)
+ListItem.create(goal: job, description: "I'm a list-item", frequency: "Daily", completed: false)
+ListItem.create(goal: get_job, description: "I'm another list-item", frequency: "Daily", completed: false)
