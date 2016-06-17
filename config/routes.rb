@@ -6,4 +6,5 @@ Rails.application.routes.draw do
       resources :list_items
     end
   end
+  post '/login', to: "sessions#create"
 end
