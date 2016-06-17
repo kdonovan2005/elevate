@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-kristin = User.create(name: "Kristin", email: "kristin@me.com")
-steve = User.create(name: "Steve", email: "steve@me.com")
+kristin = User.create(name: "Kristin", email: "kristin@me.com", password: "password")
+steve = User.create(name: "Steve", email: "steve@me.com", password: "password")
 
 job = Goal.create(user: kristin, name: "Get a job!", start_date: Time.now, end_date: Time.now + 5, active: true)
 get_job = Goal.create(user: steve, name: "Jobs Please", start_date: Time.now, end_date: Time.now + 5, active: true)
