@@ -14,8 +14,10 @@ module Api
       def create
         goal_name = params["data"]["attributes"]["name"]
         user_id = params["data"]["relationships"]["user"]["data"]["id"]
+        start_date = params["data"]["attributes"]["start-date"]
+        end_date = params["data"]["attributes"]["end-date"]
         user = User.find(user_id)
-        goal = Goal.create(name: goal_name, user: user)
+        goal = Goal.create(name: goal_name, start_date: start_date, end_date: end_date, user: user)
         render json: goal
       end
 
