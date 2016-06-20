@@ -9,13 +9,12 @@ module Api
       end
 
       def create
-        binding.pry
         user = User.create(user_params)
         render json: user
       end
 
       private
-      
+
       def user_params
         params.require(:data).require(:attributes).permit(:name, :email, :avatar, :password)
       end
