@@ -22,6 +22,9 @@ module Api
       def update
         goal = Goal.find(params["data"]["id"])
         goal.update(goal_params)
+        start_date = params["data"]["attributes"]["start-date"]
+        end_date = params["data"]["attributes"]["end-date"]
+        goal.update(start_date: start_date, end_date: end_date)
         render json: goal
       end
 
